@@ -1,0 +1,23 @@
+{
+  "name": "lwf-www",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "preact": "^10.26.2",
+    "wouter-preact": "^3.6.1"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.10.1",
+    "@types/node": "^22.14.0",
+    "prettier": "^3.5.3",
+    "stylus": "^0.64.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.2.0"
+  }
+}

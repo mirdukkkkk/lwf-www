@@ -1,0 +1,43 @@
+$padding = 33px
+
+.card
+  display grid
+  grid-template-columns 1fr 2fr
+
+.description
+  padding $padding
+  background #656565
+  display flex
+  flex-direction column
+  gap 11px
+  font-size 16px
+  font-weight 400
+  & > .supplementation
+    color #CBCBCB
+  & > .definition
+    display flex
+    gap 13px
+    & > div
+      flex 1
+      color #FFFFFE
+      white-space normal
+      word-break break-word
+
+.comparison
+  padding $padding
+  background #0098CB
+  display flex
+  flex-direction column
+  color #FFFFFE
+  gap 26px
+  font-size 24px
+  font-weight 400
+  & > div
+    & > .code_block
+      padding 10px
+      background #656565
+      font-size 25px
+      font-weight 500
+      display flex
+      align-items center
+      white-space pre
