@@ -19,6 +19,10 @@
     &::first-letter
       color #0098FF
 
+$active_button =
+  color #FFFFFE !important
+  background #0098FF
+
 .links
   justify-content space-between
   align-items center
@@ -26,6 +30,7 @@
   font-size 20px
   font-weight 400
   height 100%
+  padding 8px 0
   & > a
     justify-content center
     align-items center
@@ -34,12 +39,14 @@
     color inherit
     text-decoration none
     height 100%
+    transition background-color 0.3s ease, color 0.3s ease
     for i in visited hover active focus
       &:{i}
         color inherit
         text-decoration none
         outline none
+    &:hover
+      {$active_button}
 
 .active
-  color #FFFFFE !important
-  background #0098FF
+  {$active_button}

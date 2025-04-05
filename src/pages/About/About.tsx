@@ -1,9 +1,14 @@
 import { Component } from "preact";
-import { Introduction } from "@components";
+import { Introduction, Libraries } from "@components";
 
 class About extends Component {
     render() {
-        return <Introduction />;
+        return (
+            <>
+                <Introduction />
+                <Libraries />
+            </>
+        );
     }
 }
 

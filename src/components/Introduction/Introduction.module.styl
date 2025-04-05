@@ -1,6 +1,6 @@
 $padding = 33px
 
-.card
+.intro_block
   display grid
   grid-template-columns 1fr 2fr
   @media (max-width 968px)
@@ -29,6 +29,7 @@ $padding = 33px
     @media (max-width 968px)
       flex-direction row
     @media (max-width 480px)
+      align-items center
       flex-direction column
 
 .comparison
@@ -40,23 +41,11 @@ $padding = 33px
   gap 26px
   font-size 24px
   font-weight 400
-  & > div
-    display flex
-    flex-direction column
-    gap 8px
-    & > .code_block
-      padding 10px
-      background #656565
-      font-size 25px
-      font-weight 500
-      align-items center
-      white-space pre
-      @media (max-width 768px)
-        font-size 3.2vw
-
-.colored
-  color var(--color)
 
 .underlined
   text-decoration underline var(--color) 4px
   text-decoration-skip-ink none
+
+.block
+  @media (max-width 968px)
+    font-size 3.2vw !important

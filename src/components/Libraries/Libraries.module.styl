@@ -1,0 +1,52 @@
+.libraries_block
+  display flex
+  flex-direction column
+  background-color #CBCBCB
+  padding 33px
+  color #656565
+
+.block_name
+  font-size 24px
+  font-weight 400
+
+.libraries_list
+  display grid
+  grid-template-columns 1fr 1fr 1fr 1fr
+  @media (max-width 968px)
+    grid-template-columns 1fr 1fr
+  @media (max-width 480px)
+    grid-template-columns 1fr
+  & > div
+    margin 0 20px
+    margin-bottom 5px
+    & > li
+      list-style-type none
+      display flex
+      flex-direction column
+      gap 3px
+      & > ul
+        display flex
+        flex-direction row
+        gap 3px
+        & > a
+          text-decoration none
+          background-color #0098FF
+          display flex
+          justify-content left
+          align-items center
+          font-size 16px
+          color #FFFFFF
+          padding 9px
+          flex 1
+          for i in visited hover active focus
+            &:{i}
+              color #FFFFFF
+              text-decoration none
+              outline none
+        & > span
+          height 38px
+          width 38px
+          background-color #0098FF
+          display flex
+          justify-content center
+          align-items center

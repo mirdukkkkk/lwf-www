@@ -4,12 +4,6 @@ import { routes } from "@data";
 import styles from "./Header.module.styl";
 
 class Header extends Component {
-    static links: { to: string; label: string }[] = [
-        { to: "/", label: "About" },
-        { to: "/specifications", label: "Specs" },
-        { to: "/future", label: "Future" }
-    ];
-
     render() {
         return (
             <div className={styles.header}>
@@ -25,6 +19,7 @@ class Header extends Component {
                         .map(({ path, name }) => (
                             <Link
                                 to={path}
+                                key={path}
                                 className={(isActive) =>
                                     isActive ? styles.active : ""
                                 }

@@ -1,8 +1,13 @@
 import { Component } from "preact";
+import { CodeBlock } from "@components";
 
 class Future extends Component {
     render() {
-        return "to be continued...";
+        return (
+            <CodeBlock
+                language={"json"}
+            >{`{"error":true,"code":404}`}</CodeBlock>
+        );
     }
 }
 

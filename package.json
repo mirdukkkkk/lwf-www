@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "preact": "^10.26.2",
+    "prismjs": "^1.30.0",
     "wouter-preact": "^3.6.1"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.10.1",
     "@rollup/plugin-alias": "^5.1.1",
     "@types/node": "^22.14.0",
+    "@types/prismjs": "^1.26.5",
     "prettier": "^3.5.3",
     "stylus": "^0.64.0",
     "typescript": "^5.8.3",
