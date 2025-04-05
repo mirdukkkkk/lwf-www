@@ -1,6 +1,6 @@
 import { Component } from "preact";
 
-import { Header, Introduction } from "./components";
+import { Header, Router } from "@components";
 
 import "./styles/index.styl";
 
@@ -9,8 +9,7 @@ class App extends Component {
         return (
             <div>
                 <Header />
-                <Introduction />
-                <div>oneword</div>
+                <Router />
             </div>
         );
     }

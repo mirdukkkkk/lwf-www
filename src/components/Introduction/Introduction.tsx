@@ -1,4 +1,5 @@
 import { Component } from "preact";
+import { type JSX } from "react";
 import styles from "./Introduction.module.styl";
 
 class Introduction extends Component {
@@ -6,13 +7,22 @@ class Introduction extends Component {
     static codeblock = {
         number: "#65CB65",
         string: "#98CBCB",
-        boolean: "#FEFF00"
+        boolean: "#FEFF00",
+        underline: "#659865"
     };
 
-    static paint(string: string, type: keyof typeof Introduction.codeblock) {
+    static paint(
+        children: JSX.Element | string,
+        type: keyof typeof Introduction.codeblock
+    ) {
         return (
-            <span style={{ color: Introduction.codeblock[type] }}>
-                {string}
+            <span
+                className={
+                    type === "underline" ? styles.underlined : styles.colored
+                }
+                style={{ "--color": Introduction.codeblock[type] }}
+            >
+                {children}
             </span>
         );
     }
@@ -59,11 +69,23 @@ class Introduction extends Component {
                     <div>
                         <div>In LWF 14 bytes</div>
                         <div className={styles.code_block}>
-                            {/* prettier-ignore */}00 00{" "}
-                            {Introduction.paint("7F", "number")} 01 07{" "}
-                            {Introduction.paint("01", "boolean")} 08{" "}
-                            {Introduction.paint("06", "number")}&nbsp;
-                            {Introduction.paint("ready!", "string")}
+                            {Introduction.paint("00", "underline")}{" "}
+                            {Introduction.paint(
+                                <>00 {Introduction.paint("7F", "number")}</>,
+                                "underline"
+                            )}{" "}
+                            {Introduction.paint("01 00", "underline")}{" "}
+                            {Introduction.paint(
+                                <>07 {Introduction.paint("01", "boolean")}</>,
+                                "underline"
+                            )}{" "}
+                            {Introduction.paint(
+                                <>
+                                    08 {Introduction.paint("06", "number")}{" "}
+                                    {Introduction.paint("ready!", "string")}
+                                </>,
+                                "underline"
+                            )}
                         </div>
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 import { Component } from "preact";
-import styles from "./Header.module.styl";
 import { Link } from "wouter-preact";
+import { routes } from "@data";
+import styles from "./Header.module.styl";
 
 class Header extends Component {
     static links: { to: string; label: string }[] = [
@@ -19,16 +20,18 @@ class Header extends Component {
                     <div>Format</div>
                 </div>
                 <div className={styles.links}>
-                    {Header.links.map(({ to, label }) => (
-                        <Link
-                            to={to}
-                            className={(isActive) =>
-                                isActive ? styles.active : ""
-                            }
-                        >
-                            {label}
-                        </Link>
-                    ))}
+                    {routes
+                        .filter(({ name }) => name)
+                        .map(({ path, name }) => (
+                            <Link
+                                to={path}
+                                className={(isActive) =>
+                                    isActive ? styles.active : ""
+                                }
+                            >
+                                {name}
+                            </Link>
+                        ))}
                 </div>
             </div>
         );
