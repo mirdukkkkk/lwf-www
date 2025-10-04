@@ -1,7 +1,7 @@
 {
   "name": "lwf-www",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,18 +9,18 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "preact": "^10.26.2",
+    "preact": "^10.27.2",
     "prismjs": "^1.30.0",
-    "wouter-preact": "^3.6.1"
+    "wouter-preact": "^3.7.1"
   },
   "devDependencies": {
-    "@preact/preset-vite": "^2.10.1",
+    "@preact/preset-vite": "^2.10.2",
     "@rollup/plugin-alias": "^5.1.1",
-    "@types/node": "^22.14.0",
+    "@types/node": "22.18",
     "@types/prismjs": "^1.26.5",
-    "prettier": "^3.5.3",
+    "prettier": "^3.6.2",
     "stylus": "^0.64.0",
-    "typescript": "^5.8.3",
-    "vite": "^6.2.0"
+    "typescript": "^5.9.3",
+    "vite": "^7.1.9"
   }
 }
