@@ -26,8 +26,6 @@ jobs:
 
       - run: yarn install --frozen-lockfile
 
-      - run: npm install -g wrangler
-
       - run: yarn build
 
       - uses: cloudflare/wrangler-action@v3
